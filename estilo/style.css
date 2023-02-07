@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --main-padding: 20px;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    background-color: red;
+    min-height: 150px;
+    
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px ;
+    margin-right: 20px;
+    
+}
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+header >p {
+   
+    font-size: 1.5em;
+    color: white;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+}
+
+nav {
+    min-width: 300px;
+    max-width: 1295px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: blue;
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+    text-align: center;
+    width: 100%;
+}
+nav > a {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 5s;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+main {
+    margin: auto;
+    width: 1000px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: var(--main-padding);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+h1 {
+    text-align: center;
+}
+h3 {
+    text-align: justify;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+a {
+    font-size: 12px;
+    color: blue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img {
+    width:100% ;
+    min-height: 150px;
+    max-height: 200px;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+
+div.container {
+    display: inline-block;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+div.box {
+    display: inline-block;
+    margin-right: 43px;
+    margin-left: 43px;
+}
+
+div.vídeo {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+
+div.vídeo > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+@media (max-width: 1060px) {
+    
+    
+    /* header {
+        --margin: 20px;
+        --offset: calc(
+            var(--margin) + var(--header-padding)
+            );
+            width: 100%;
+            margin-right: var(--margin);
+            margin-left: var(--margin); */
+            /* margin-right: 20px !important;
+            width: 100% !important;
+            
+        }
+        min-width: 350px !important; */
+        main {
+            --margin: 20px;
+            --offset: calc(
+                var(--margin) + var(--main-padding)
+                );
+                width: calc(100% - var(--offset));
+                margin-right: var(--margin);
+                margin-left: var(--margin);
+            }
+            
+            header {
+                
+                margin-left: 20px !important;
+                margin-right: 20px !important;
+                width: 100% !important;
+                min-width: 350px !important;
+                
+            }
+            
+            picture, img, source {
+        width: 100% !important;
+    }
+    img {
+        margin-bottom: 20px;
+    }
+    .container {
+        display: block;
+    }
+    ul, h3 {
+        margin-left: 0px !important;
+        padding: 0px !important;
+        max-width: 100%;
+    }
+    nav {
+        background-color: blue;
+        margin-top: 0.5px !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        padding: 0px !important;
+        max-width: 100%;
+        min-width: 350px !important;
+        height: 30px;
+    }
+    nav >a{
+        width: 100% !important;
+        
+        
+    }
+    
+    div.container {
+        text-align: center;
+    }
+    
+    div.box {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.row {
+    display: flex !important;
+}
+
+.col {
+    width: 100%;
+    margin: 3px;
+}
+
+.col:first-child {
+    margin-left: 0px;
+}
+
+.col:last-child {
+    margin-right: 0px;
+}
+
+@media (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
